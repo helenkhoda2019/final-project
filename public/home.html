@@ -12,28 +12,61 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
     <style>
-        #chain,
+       
+        /* #chain,
         #battery,
         #hourglass {
             font-size: 50px;
-        }
+        } */
 
         .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-
-
+        .modal-content {
+            background-color: #b5ab99e3;
+        }
     </style>
 </head>
 
 
 <body>
+
+    <!-- =================== MODAL================== -->
+
+    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">STEAL THE SHOW </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    blah blah blah
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- =================== MODAL END ================== -->
+
+
+
     <!-- ========= navbar ============== -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.html">LOGO</a>
+        <a class="navbar-brand mx-auto" href="home.html">
+            <img src="images/STS Logo.png" width="100" height="100" class="logo d-inline-block" alt="" />
+        </a>
+        <h1 style="font-family: URW Chancery L, cursive; ">STEAL THE SHOW</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -73,7 +106,7 @@
             </ul>
         </div>
     </nav>
-    
+
 
     <!-- NAVBAR REACT -->
     <!-- var NewComponent = React.createClass({
@@ -207,7 +240,7 @@
 
 
 
-    <div  class="center" >
+    <div class="center">
         <div class="form-container rounded pt-1 pt-2">
             <a href="handbag.html">
                 <input type="image" id="handbag" class="handbag icons rounded" src="images/handbag.png" width="100"
@@ -223,16 +256,20 @@
         </div>
 
         <div class="form-container rounded pt-1 pt-2">
-                <a href="shoes.html">
-                    <input type="image" id="shoes" class="shoess icons rounded" src="images/heel.jpg" width="100"
-                        height="100" />
-                </a>
+            <a href="shoes.html">
+                <input type="image" id="shoes" class="shoess icons rounded" src="images/heel.jpg" width="100"
+                    height="100" />
+            </a>
         </div>
     </div>
 
+    <!-- <script>
+      $(document).ready(function(){
+    $('#myModal').modal('show');
+  });
+ </script> -->
 
-    
-    
+
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

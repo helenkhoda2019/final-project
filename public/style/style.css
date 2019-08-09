@@ -1,6 +1,26 @@
-/* body {
-    background-image: url(../images/background3.jpg);
+*{
+    font-family: 'Comic sans ms', Courier, monospace; 
+ }
+
+body {
+    background-image: url(../images/pexels-photo-220118.jpeg);
     background-size: cover;
     background-attachment: fixed;
 
-} */
+}
+
+#chain,
+#battery,
+#hourglass {
+     font-size: 50px;
+} 
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.modal-content {
+    background-color: #b5ab99e3;
+}
