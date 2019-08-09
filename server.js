@@ -12,21 +12,14 @@ if (process.env.Node_ENV === "production"){
   app.use(express.static("clinet/build"));
 }
 
-// connection to the image 
- app.post("/api/add_image,",function(res,res){
-   console.log(req.body);
-   Image.create(req.body)
-   .then(function(data){
-     res.jason(data)
-   }).catch(function(err){
-     res.statusCode(500)
-   });
- });
 
 app.use(express.static(path.join(__dirname, 'build')));
 
 // app.get('/', function(req, res) {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
+
+
+// routes for 
 
 app.listen(Port);
