@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- icon cdn and style  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+    <style>
+        #chain,
+        #battery,
+        #hourglass {
+            font-size: 50px;
+        }
+
+        .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+    </style>
+</head>
+
+
+<body>
+    <!-- ========= navbar ============== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="home.html">LOGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="plan.html">Plan</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="dress.html">Dress</a>
+                        <a class="dropdown-item" href="shoes.html">Shoes</a>
+                        <a class="dropdown-item" href="handbag.html">Handbag</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="longin.html">Log In</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- NAVBAR REACT -->
+    <!-- var NewComponent = React.createClass({
+        render: function() {
+          return (
+      
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+              <a className="navbar-brand" href="#">LOGO</a>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon" />
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
+                  <li className="nav-item active">
+                    <a className="nav-link" href="#"> <span className="sr-only">(current)</span></a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">Profile</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">Plan</a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Category
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a className="dropdown-item" href="#">Dress</a>
+                      <a className="dropdown-item" href="#">Shoes</a>
+                      <a className="dropdown-item" href="#">Handbag</a>
+                    </div>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">Log In</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          );
+        }
+      }); -->
+
+    <video width="500" height="500" autoplay>
+        <!-- video in mp3  video controls -->
+        <source src="videos/runway.mp4" type="video/mp4">
+    </video>
+
+    <video width="500" height="500" autoplay>
+        <!-- video in mp3  video controls -->
+        <source src="videos/runway2.mp4" type="video/mp4">
+    </video>
+
+    <video width="500" height="500" autoplay>
+        <!-- video in mp3  video controls -->
+        <source src="videos/runway3.mp4" type="video/mp4">
+    </video>
+
+
+    <!--=========================================== animated icons examples ================================================-->
+
+    <!-- <div id="chain" class="fa"></div>
+
+    <br><br>
+
+    <div id="battery" class="fa"></div>
+
+    <br><br>
+
+    <div id="hourglass" class="fa"></div>
+    
+    <script>
+
+        
+        // brake chain animation
+        function brakeChain(){
+            let chain = document.getElementById('chain');
+            chain.innerHTML = "&#xf0c1;";
+
+            setTimeout(function(){
+                chain.innerHTML = "&#xf127;";
+            }, 1000);
+        }
+        // call animation
+        brakeChain();
+
+        //animate every 2 sec
+        setInterval(brakeChain,2000);
+            
+      
+        // battery charge 
+        function chargeBattery(){
+            let Battery = document.getElementById('battery');
+            battery.innerHTML = "&#xf244;";
+            
+            setTimeout(function(){
+                battery.innerHTML = "&#xf243;";
+            }, 1000);
+            setTimeout(function(){
+                battery.innerHTML = "&#xf242;";
+            }, 2000);
+            setTimeout(function(){
+                battery.innerHTML = "&#xf241;";
+            }, 3000);
+            setTimeout(function(){
+                battery.innerHTML = "&#xf240;";
+            }, 4000);
+        }
+        // run animation
+        chargeBattery();
+
+        setInterval(chargeBattery,5000);
+
+        function hourglassTip(){
+            let hourglass = document.getElementById('hourglass');
+            hourglass.innerHTML = "&#xf251;";
+
+            setTimeout(function(){
+                hourglass.innerHTML =  "&#xf252;";
+            },1000);
+            setTimeout(function(){
+                hourglass.innerHTML =  "&#xf253;";
+            },2000);
+        }
+
+        hourglassTip();
+
+        setInterval(hourglassTip,3000);
+    </script> -->
+
+    <!-- ========================================== end animated icons ======================================= -->
+
+
+
+    <div  class="center" >
+        <div class="form-container rounded pt-1 pt-2">
+            <a href="handbag.html">
+                <input type="image" id="handbag" class="handbag icons rounded" src="images/handbag.png" width="100"
+                    height="100" />
+            </a>
+        </div>
+
+        <div class="form-container rounded pt-1 pt-2">
+            <a href="dress.html">
+                <input type="image" id="dress" class="dress icons rounded" src="images/dress1.jpg" width="100"
+                    height="100" />
+            </a>
+        </div>
+
+        <div class="form-container rounded pt-1 pt-2">
+                <a href="shoes.html">
+                    <input type="image" id="shoes" class="shoess icons rounded" src="images/heel.jpg" width="100"
+                        height="100" />
+                </a>
+        </div>
+    </div>
+
+
+    
+    
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
