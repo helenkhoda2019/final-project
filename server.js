@@ -28,6 +28,11 @@ app.get('/handbag', function(req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'handbag.html'));
 });
 
+app.get('/login', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'login.html'));
+});
+
+
 
 
 // routes for dress.html
@@ -68,6 +73,10 @@ app.get("/api/handbags",function (req,res){
     res.json(err);
   }) 
  });
+
+
+
+
 
 
 app.listen(Port);
