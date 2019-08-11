@@ -6,15 +6,11 @@ var Schema = mongoose.Schema;
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
 var UserSchema = new Schema({
-  // `username` must be of type String
-  // `username` will trim leading and trailing whitespace before it's saved
-  // `username` is a required field and throws a custom error message if not supplied
-  username: {
+  email: {
     type: String,
-    trim: true,
-    required: "Username is Required"
+    unique: true,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
   },
- 
   // `password` is a required field and throws a custom error message if not supplied
   // `password` uses a custom validation function to only accept values 6 characters or more
   password: {
@@ -28,18 +24,11 @@ var UserSchema = new Schema({
       "Password should be longer."
     ]
   },
-
-  email: {
-    type: String,
-    unique: true,
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-  },
 // will be an array of inventory id's
   itemsRented: [{
       type: Schema.Types.ObjectId,
       ref: "Inventory"
   }],
-
   userCreated: {
     type: Date,
     default: Date.now

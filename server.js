@@ -20,19 +20,63 @@ app.get('/dress', function(req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'dress.html'));
 });
 
+app.get('/shoes', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'shoes.html'));
+});
+
+app.get('/handbag', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'handbag.html'));
+});
+
+app.get('/login', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'login.html'));
+});
+
+
 
 
 // routes for dress.html
 app.get("/api/dress",function (req,res){
-  db.Inventory.find({})
+  db.Inventory.find({
+    category: 'dress'
+  })
   .then(function(dbInventory){
     res.json(dbInventory);
   })
   .catch(function(err){
     res.json(err);
+  }) 
+ });
+
+ // route for shoes.html
+app.get("/api/shoes",function (req,res){
+  db.Inventory.find({
+     category: 'shoes'
   })
-    
-  });
+  .then(function(dbInventory){
+    res.json(dbInventory);
+  })
+  .catch(function(err){
+    res.json(err);
+  }) 
+ });
+
+  // route for handbag.html
+app.get("/api/handbags",function (req,res){
+  db.Inventory.find({
+     category: 'bag'
+  })
+  .then(function(dbInventory){
+    res.json(dbInventory);
+  })
+  .catch(function(err){
+    res.json(err);
+  }) 
+ });
+
+
+
+
 
 
 app.listen(Port);

@@ -1,7 +1,4 @@
-
-
-// Grab the articles as a json
-$.getJSON("/api/dress", function(data) {
+$.getJSON("/api/handbags", function(data) {
 
     console.log(data);
     
@@ -21,4 +18,3 @@ $.getJSON("/api/dress", function(data) {
   });
 
   
-

@@ -1,11 +1,9 @@
-
-
-// Grab the articles as a json
-$.getJSON("/api/dress", function(data) {
+$.getJSON("/api/shoes", function(data) {
 
     console.log(data);
     
     for (var i = 0; i < data.length; i++) {
+        $("#shoes").append(data);
         // data.addClass("card");
         // var photo = data[i].src;
         // $(".card-img-top").append("img src=" + photo + "/>");
@@ -19,6 +17,3 @@ $.getJSON("/api/dress", function(data) {
         //  "Description: " + data[i].description + "Retail Price: " + data[i].retailPrice + "Photo:" + "<img src=" + data[i].src + "/>")
     }
   });
-
-  
-
