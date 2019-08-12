@@ -40,9 +40,6 @@ app.get('/login', function(req, res) {
 // });
 
 
-
-
-// routes for dress.html
 app.get("/api/:category",function (req,res){
   db.Inventory.find({
     category: req.params.category
