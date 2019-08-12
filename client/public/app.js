@@ -1,22 +1,26 @@
 
-
-// Grab the articles as a json
 $.getJSON("/api/dress", function(data) {
 
     console.log(data);
     
     for (var i = 0; i < data.length; i++) {
-        // data.addClass("card");
-        // var photo = data[i].src;
-        // $(".card-img-top").append("img src=" + photo + "/>");
-        var designer = data[i].designer;
-        $(".card-title").append(designer);
-        var description = data[i].description;
-        $(".card-text").append(description);
-        var price = data[i].retailPrice;
-        $(".price").append(price);
-        
-        //  "Description: " + data[i].description + "Retail Price: " + data[i].retailPrice + "Photo:" + "<img src=" + data[i].src + "/>")
+        var card = `
+        <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="${data[i].src}"/>
+                                        <h5 class="card-title">${data[i].designer}</h5>
+                                        <p class="card-text">${data[i].description}</p>
+                                        <p class="card-text price">Retail Price: ${data[i].retailPrice}</p>
+                                        <button class="btn btn-primary" data-id=${data[i]._id}>Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+        $("#dress-data").append(card);
     }
   });
 
