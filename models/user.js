@@ -1,4 +1,6 @@
 var mongoose = require("mongoose");
+// const crypto = require('crypto');
+// const jwt = require('jsonwebtoken');
 
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;

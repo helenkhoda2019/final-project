@@ -9,6 +9,13 @@ mongoose.connect(
   "mongodb://localhost/stealtheshow"
 );
 
+const userSeed = [
+  {
+    email: "test@me.com",
+    password: "password"
+  }
+];
+
 const inventorySeed = [
   {
     src: "https://pc-ap.rtrcdn.com/productimages/front/270x/c3/REF14.jpg",
@@ -178,6 +185,18 @@ const inventorySeed = [
 db.Inventory
   .remove({})
   .then(() => db.Inventory.collection.insertMany(inventorySeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
