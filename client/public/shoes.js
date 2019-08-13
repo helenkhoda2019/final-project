@@ -13,7 +13,7 @@ function getData(thisid) {
         console.log(data);
 
         for (var i = 0; i < data.length; i++) {
-            inventory[data[i]._id] = data[i].description
+            inventory[data[i]._id] = data[i]
             var card = `
             <div class="card" id="shoe-data" style="width: 18rem;">
                 <div class="card-body">
@@ -21,7 +21,7 @@ function getData(thisid) {
                         <h5 class="card-title">${data[i].designer}</h5>
                         <p class="card-text">${data[i].description}</p>
                         <p class="card-text price">Retail Price: $${data[i].retailPrice}</p>
-                        <button class="btn btn-primary add-to-cart" data-id=${data[i]._id}>Add to Cart</button>
+                        <button class="btn btn-primary add-to-cart" id='bt${data[i]._id}'>Add to Cart</button>
                 </div>
             </div>        
                         `
@@ -49,11 +49,25 @@ $('#shoe-data').on("click", ".add-to-cart", function (event) {
 });
 
 // Shopping bag button
+
 $("#cart").on("click", function () {
+    $("#table tbody").empty();
+    //inventory[user_cart[i]]  inventory is array of id = description
     for (var i = 0; i < user_cart.length; i++) {
-        $('#row').after("<td>" + inventory[user_cart[i]] + "</td>");
+        var inventory_item = inventory[user_cart[i]]
+       var row = "<tr><td>" + (i+1) + "</td><td>" + inventory_item["description"] + "</td><td>" + inventory_item["retailPrice"] 
+       row += "</td><td data-id='"+ user_cart[i] +"' class='remove-item'>X</td></tr>";
+       $('#table').append(row);
     }
+
+    $('.remove-item').on('click', function() {
+        var item_id = $(this).data("id");
+        var idx = user_cart.indexOf(item_id);
+        user_cart.slice(idx, 1);
+        $(this).parent().remove();
+    })
 });
+
 
 // $("#cart").on("click", function () {
 //     // empties current section/div
