@@ -1,5 +1,6 @@
 import React from "react";
 import "./image.css";
+import Navbar from "./Navbar";
 
 function Image(props) {
     return(
