@@ -25,6 +25,10 @@ var InventorySchema = new Schema({
     },
     rented:{
         type:Boolean
+    },
+    category: {
+        type:String,
+        trim:true
     }
 });
 
