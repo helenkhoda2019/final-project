@@ -1,10 +1,10 @@
-*{
-    font-family: 'Snell Roundhand', cursive, monospace; 
+
+    /* font-family: 'Snell Roundhand', cursive, monospace; 
  }
 
 body {
     /* background-image: url(../images/pexels-photo-220118.jpeg); */
-    background-size: cover;
+    /* background-size: cover;
     background-attachment: fixed;
 
 }
@@ -23,4 +23,15 @@ body {
 
 .modal-content {
     background-color: #b5ab99e3;
+} */ 
+
+.btn-gold {
+    background-color: #C49A3A;
+    color: #ffffff;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: #ffffff;
+
 }
