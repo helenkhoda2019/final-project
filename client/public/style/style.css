@@ -1,4 +1,4 @@
-*{
+
     /* font-family: 'Snell Roundhand', cursive, monospace; 
  }
 
@@ -23,4 +23,15 @@ body {
 
 .modal-content {
     background-color: #b5ab99e3;
-} */ */
+} */ 
+
+.btn-gold {
+    background-color: #C49A3A;
+    color: #ffffff;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: #ffffff;
+
+}
