@@ -36,7 +36,7 @@ app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'login.html'));
 });
 
-app.get('/about', function(req, res) {
+app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'about.html'));
 });
 
@@ -53,66 +53,40 @@ app.get("/api/:category", function (req, res) {
     })
 });
 
-<<<<<<< Updated upstream
- app.get("/api/cart/:id",function (req,res){
-  db.Inventory.findById(req.params.id, function(err, data){
+app.get("/api/cart/:id", function (req, res) {
+  db.Inventory.findById(req.params.id, function (err, data) {
     if (err) {
       return err
     }
     res.json(data)
   })
-   
- });
 
- // POST ROUTE FOR HANDLING RETURN OF ITEMS
- app.post("/api/cart/return/:id", function(req,res) {
+});
+
+// POST ROUTE FOR HANDLING RETURN OF ITEMS
+app.post("/api/cart/return/:id", function (req, res) {
   db.Inventory.findOneAndUpdate({
-    _id: req.params.id}, {rented: false}, function(err, data) {
-      if(err) {
-        return err
-      } 
-      res.json(data)
-    })
- });
+    _id: req.params.id
+  }, { rented: false }, function (err, data) {
+    if (err) {
+      return err
+    }
+    res.json(data)
+  })
+});
 
- // POST ROUTE FOR HANDLING RENTING OF ITEMS
- app.post("/api/cart/rent/:id", function(req,res) {
+// POST ROUTE FOR HANDLING RENTING OF ITEMS
+app.post("/api/cart/rent/:id", function (req, res) {
   db.Inventory.findOneAndUpdate({
-    _id: req.params.id}, {rented: true}, function(err, data) {
-      if(err) {
-        return err
-      } 
-      res.json(data)
-    })
- });
+    _id: req.params.id
+  }, { rented: true }, function (err, data) {
+    if (err) {
+      return err
+    }
+    res.json(data)
+  })
+});
 
-=======
-// route for shoes.html
-// app.get("/api/shoes",function (req,res){
-//   db.Inventory.find({
-//      category: 'shoes'
-//   })
-//   .then(function(dbInventory){
-//     res.json(dbInventory);
-//   })
-//   .catch(function(err){
-//     res.json(err);
-//   }) 
-//  });
-
-// route for handbag.html
-// app.get("/api/handbags",function (req,res){
-//   db.Inventory.find({
-//      category: 'bag'
-//   })
-//   .then(function(dbInventory){
-//     res.json(dbInventory);
-//   })
-//   .catch(function(err){
-//     res.json(err);
-//   }) 
-//  });
->>>>>>> Stashed changes
 
 app.get("/profile", function (req, res) {
   db.User.find({
@@ -125,29 +99,47 @@ app.get("/profile", function (req, res) {
     .catch(function (err) {
       res.json(err);
     })
-})
+});
+
 app.post("/api/login", function (req, res) {
   var username = req.body.username;
   var userpassword = req.body.password;
-  console.log(username)
+  console.log(username);
   db.User.findOne({
     email: username
-  }), function (err, data) {
-    if (err) {
-      console.log("no user found");
-    } else {
-      console.log(data);
-    };
+  }).then(function (data) {
+    if (!data) {
+      db.User.create({
+        email: username,
+        password: userpassword
+      })
+      console.log("User Created!")
+      res.send("/home");
+    }
+    else {
+      if (data.password !== userpassword) {
+        res.json(
+          {
+            userID: false,
+            msg: "wrong password"
+          }
+        )
+        console.log("Wrong Password!");
+      }
+      else {
+        res.json(
+          {
+            userID: data._id,
+            msg: ""
+          }
+        )
+        console.log("Correct Password!");
+      }
+    }
+  }).catch(function (err) {
+    res.json(err);
+  })
 
-    // if (data && data.password === req.body.password) {
-    //   console.log("if");
-    //   res.json(data);
-    // } else {
-    //   res.send("/")
-    // }
-
-  }
-  
 
 
 })
