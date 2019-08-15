@@ -90,7 +90,24 @@ app.get("/profile", function (req, res) {
     res.json(err);
   })
 })
+app.post("/login", function (req, res) {
+  var dbUser = db.User.findOne({
+    
+    email: req.body.username
+},function(err , data){
+  console.log(data);
+    if(data && data.password === req.body.password) {
+      console.log("if");
+            res.json(data); 
+    } else {
+      res.send ("/")
+    }
 
+}
+)
+
+
+  })
 
 
 
