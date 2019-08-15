@@ -5,6 +5,7 @@ const app =express();
 var mongoose = require('mongoose');
 var db = require("./models");
 require('./config/passport');
+// var ObjectId = mongoose.Types.ObjectId;
 
 const Port = process.env.PORT || 8000;
 // const Image =require("./models/giphyModel");
@@ -35,9 +36,9 @@ app.get('/login', function(req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'login.html'));
 });
 
-// app.get('/profile', function(req, res) {
-//   res.sendFile(path.join(__dirname, 'client/public', 'profile.html'));
-// });
+app.get('/about', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'about.html'));
+});
 
 
 app.get("/api/:category",function (req,res){
@@ -52,31 +53,38 @@ app.get("/api/:category",function (req,res){
   }) 
  });
 
- // route for shoes.html
-// app.get("/api/shoes",function (req,res){
-//   db.Inventory.find({
-//      category: 'shoes'
-//   })
-//   .then(function(dbInventory){
-//     res.json(dbInventory);
-//   })
-//   .catch(function(err){
-//     res.json(err);
-//   }) 
-//  });
+ app.get("/api/cart/:id",function (req,res){
+  db.Inventory.findById(req.params.id, function(err, data){
+    if (err) {
+      return err
+    }
+    res.json(data)
+  })
+   
+ });
 
-  // route for handbag.html
-// app.get("/api/handbags",function (req,res){
-//   db.Inventory.find({
-//      category: 'bag'
-//   })
-//   .then(function(dbInventory){
-//     res.json(dbInventory);
-//   })
-//   .catch(function(err){
-//     res.json(err);
-//   }) 
-//  });
+ // POST ROUTE FOR HANDLING RETURN OF ITEMS
+ app.post("/api/cart/return/:id", function(req,res) {
+  db.Inventory.findOneAndUpdate({
+    _id: req.params.id}, {rented: false}, function(err, data) {
+      if(err) {
+        return err
+      } 
+      res.json(data)
+    })
+ });
+
+ // POST ROUTE FOR HANDLING RENTING OF ITEMS
+ app.post("/api/cart/rent/:id", function(req,res) {
+  db.Inventory.findOneAndUpdate({
+    _id: req.params.id}, {rented: true}, function(err, data) {
+      if(err) {
+        return err
+      } 
+      res.json(data)
+    })
+ });
+
 
 app.get("/profile", function (req, res) {
   db.User.findOne({ 
