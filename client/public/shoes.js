@@ -22,7 +22,7 @@ function getData(thisid) {
                         <h5 class="card-title">${data[i].designer}</h5>
                         <p class="card-text">${data[i].description}</p>
                         <p class="card-text price">Retail Price: $${data[i].retailPrice}</p>
-                        <button class="btn btn-primary add-to-cart" id='bt${data[i]._id}'>Add to Cart</button>
+                        <button class="btn btn-black add-to-cart" id='bt${data[i]._id}'>Add to Cart</button>
                 </div>
             </div>        
                         `
@@ -38,28 +38,41 @@ $('#shoe-data').on("click", ".add-to-cart", function (event) {
     var item_id=this_id.substring(2);
     $('#' + this_id).hide();
     // if item already exists in cart
-    if (user_cart.includes(item_id)) {
+    if (user_cart.includes(item_id) && user_cart.length >= 3) {
+        alert("Only 3 items allowed with your subscription plan!")
         return;
     } else {
         user_cart.push(item_id); 
     };
     console.log(user_cart);
+    // console.log(user_cart.length);
     
-    // UPDATE ITEM QUANTITY??
-    document.getElementById("#item-count").innerHTML = user_cart.length;
+    // UPDATE ITEM QUANTITY
+   $("#item-count").html(user_cart.length);
 });
 
 // Shopping bag button
 $("#cart").on("click", function () {
     $("#table tbody").empty();
     //inventory[user_cart[i]]  inventory is array of id = description
+    var totalCost = 0;
     for (var i = 0; i < user_cart.length; i++) {
         var inventory_item = inventory[user_cart[i]];
 
-       var row = "<tr><td>" + (i+1) + "</td><td>" + inventory_item["description"] + "</td><td>" + inventory_item["retailPrice"] 
+       var row = "<tr><td>" + (i+1) + "</td><td>" + inventory_item["description"] + "</td><td>$" + inventory_item["retailPrice"] 
        row += "</td><td data-id='"+ user_cart[i] +"' class='remove-item'>X</td></tr>";
+
        $('#table').append(row);
+
+       totalCost += inventory_item["retailPrice"];
+       console.log(totalCost);
+
     }
+
+    console.log(totalCost);
+    var rowTotal = "<tr><td></td><td>Total:</td><td>$" + totalCost + "</td></tr>"
+    $('#table').append(rowTotal);
+
     // Removes unwanted item from shopping bag
     $('.remove-item').on('click', function() {
         var item_id = $(this).data("id");
@@ -70,4 +83,10 @@ $("#cart").on("click", function () {
     })
 });
 
+
+// Check out button w/in cart
+$("#check-out").on("click", function() {
+    console.log(user_cart);
+    localStorage.setItem("cart", JSON.stringify(user_cart));
+})
 
