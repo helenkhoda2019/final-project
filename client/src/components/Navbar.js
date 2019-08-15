@@ -8,7 +8,7 @@ class Navbar extends Component {
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <Link className="navbar-brand mx-auto" to="/">
-                    <img src={require('../images/STS Logo.png')} width="100" height="100" className="logo d-inline-block" alt="" />
+                    <img src={require('../images/STS-Logo.png')} width="100" height="100" className="logo d-inline-block" alt="" />
                 </Link>
                 <h1 >STEAL THE SHOW</h1>
 
@@ -39,24 +39,27 @@ class Navbar extends Component {
                                 Category
                             </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="dress.html">Dress</a>
-                                <a className="dropdown-item" href="shoes.html">Shoes</a>
-                                <a className="dropdown-item" href="handbag.html">Handbag</a>
+                            <a class="dropdown-item" href="../../dress.html">Dress</a>
+                                <a className="dropdown-item" href="../../shoes.html">Shoes</a>
+                                <a className="dropdown-item" href="../../handbag.html">Handbag</a>
                             </div>
                         </li>
 
-                        <li className="nav-item">
-                            {/* <Link className="navbar-brand mx-auto" to="/cart">Cart</Link> */}
-                            <a class="nav-link" href="cart.html">Cart</a>
+                       
 
-                        </li>
+                        
 
                         <li className="nav-item">
                             <li className="nav-item">
                                 {/* <Link className="navbar-brand mx-auto" to="/login">Log In</Link> */}
-                                <a class="nav-link" href="longin.html">Log In</a>
+                                <a class="nav-link" href="/login.html">Log In</a>
 
                             </li>
+                            {/* <li className="nav-item">
+                                // {/* <Link className="navbar-brand mx-auto" to="/login">Log In</Link> */}
+                                {/* // <a class="nav-link" href="/Home"> View product</a>
+                                // </li> */} */}
+
                         </li>
 
 
