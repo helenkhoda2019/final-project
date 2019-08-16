@@ -18,7 +18,7 @@
 <body>
 
     <!-- ========= navbar ============== -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="margin:0;" id="homenav">
             <a class="navbar-brand mx-auto" href="home.html">
                 <h1>Steal the Show</h1>
                 <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
@@ -39,25 +39,26 @@
                         <a class="nav-link mr-1" href="plan.html">How It Works</a>
                     </li>
                     <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Shop By Category
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item category" id="dress" href="#">Dresses</a>
-                                <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
-                                <a class="dropdown-item category" id="bag" href="#">Handbags</a>
-                            </div>
-                        </li>
-                    
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shop By Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item category" id="dress" href="#">Dresses</a>
+                            <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
+                            <a class="dropdown-item category" id="bag" href="#">Handbags</a>
+                        </div>
+                    </li>
+    
                     <div class='nav-right'>
-                            
+    
                         <li class="nav-item mr-1">
                             <a class="nav-link" href="login.html">Log In</a>
                         </li>
                         <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
                         <li class="nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart" src="images/shopping-bag-48.png"/></a>
+                            <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
+                                    src="images/shopping-bag-48.png" /></a>
                         </li>
                         <!-- ITEM COUNT -->
                         <li id="item-count"></li>
@@ -65,8 +66,12 @@
                 </ul>
             </div>
         </nav>
-   
-    <br>
+
+
+  
+    <div class="alert alert-primary" role="alert">
+        Two ways <em>you</em> can steal the show:
+    </div>
 
     <!-- TITLE AND SUBTITLE -->
     <h1 class="text-center">How it Works</h1>
@@ -77,6 +82,7 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <!-- CARD DECK -->
+            
                 <div class="card-deck">
                         <!-- FIRST CARD -->
                         <div class="card">
@@ -119,9 +125,10 @@
                             
                           </div>
                         </div>
+
+                        
                 
                       </div>
-
         </div>
     </div>
 

@@ -12,211 +12,126 @@
      <!-- google font -->
      <link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 </head>
 
 
 <body>
 
-    <!-- =================== MODAL================== -->
+    <!-- <video autoplay loop muted id="bgvideo">
+        <source src="videos/videoplayback.mp4">
+    </video> -->
 
-    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">STEAL THE SHOW </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    blah blah blah
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- =================== MODAL END ================== -->
-
-
-
-      <!-- ========= navbar ============== -->
-      <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand mx-auto" href="home.html">
-                <h1>Steal the Show</h1>
-                <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="plan.html">How It Works</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Shop By Category
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item category" id="dress" href="#">Dresses</a>
-                                <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
-                                <a class="dropdown-item category" id="bag" href="#">Handbags</a>
-                            </div>
-                        </li>
-                    
-                    <div class='nav-right'>
-                            
-                        <li class="nav-item mr-1">
-                            <a class="nav-link" href="login.html">Log In</a>
-                        </li>
-                        <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
-                        <li class="nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart" src="images/shopping-bag-48.png"/></a>
-                        </li>
-                        <!-- ITEM COUNT -->
-                        <li id="item-count"></li>
+    
+    <!-- ========= navbar ============== -->
+    <nav class="navbar navbar-expand-lg" style="margin:0;" id="homenav">
+        <a class="navbar-brand mx-auto" href="home.html">
+            <h1>Steal the Show</h1>
+            <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="plan.html">How It Works</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop By Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item category" id="dress" href="#">Dresses</a>
+                        <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
+                        <a class="dropdown-item category" id="bag" href="#">Handbags</a>
                     </div>
-                </ul>
-            </div>
-        </nav>
+                </li>
+
+                <div class='nav-right'>
+
+                    <li class="nav-item mr-1">
+                        <a class="nav-link" href="login.html">Log In</a>
+                    </li>
+                    <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
+                    <li class="nav-item">
+                        <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
+                                src="images/shopping-bag-48.png" /></a>
+                    </li>
+                    <!-- ITEM COUNT -->
+                    <li id="item-count"></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="section"id="video-container">
+        <div class="col-lg-4 col-sm-12">
+
+            <video autoplay>
+                <source src="videos/luisa.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <video autoplay>
+                <source src="videos/runway4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <video autoplay>
+                <source src="videos/runway3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
     
-
-   
-
-    <video width="500" height="500" autoplay>
-        <!-- video in mp3  video controls -->
-        <source src="videos/runway.mp4" type="video/mp4">
-    </video>
-
-    <video width="500" height="500" autoplay>
-        <!-- video in mp3  video controls -->
-        <source src="videos/runway2.mp4" type="video/mp4">
-    </video>
-
-    <video width="500" height="500" autoplay>
-        <!-- video in mp3  video controls -->
-        <source src="videos/runway3.mp4" type="video/mp4">
-    </video>
-
-
-    <!--=========================================== animated icons examples ================================================-->
-
-    <!-- <div id="chain" class="fa"></div>
-
-    <br><br>
-
-    <div id="battery" class="fa"></div>
-
-    <br><br>
-
-    <div id="hourglass" class="fa"></div>
-    
-    <script>
-
-        
-        // brake chain animation
-        function brakeChain(){
-            let chain = document.getElementById('chain');
-            chain.innerHTML = "&#xf0c1;";
-
-            setTimeout(function(){
-                chain.innerHTML = "&#xf127;";
-            }, 1000);
-        }
-        // call animation
-        brakeChain();
-
-        //animate every 2 sec
-        setInterval(brakeChain,2000);
-            
-      
-        // battery charge 
-        function chargeBattery(){
-            let Battery = document.getElementById('battery');
-            battery.innerHTML = "&#xf244;";
-            
-            setTimeout(function(){
-                battery.innerHTML = "&#xf243;";
-            }, 1000);
-            setTimeout(function(){
-                battery.innerHTML = "&#xf242;";
-            }, 2000);
-            setTimeout(function(){
-                battery.innerHTML = "&#xf241;";
-            }, 3000);
-            setTimeout(function(){
-                battery.innerHTML = "&#xf240;";
-            }, 4000);
-        }
-        // run animation
-        chargeBattery();
-
-        setInterval(chargeBattery,5000);
-
-        function hourglassTip(){
-            let hourglass = document.getElementById('hourglass');
-            hourglass.innerHTML = "&#xf251;";
-
-            setTimeout(function(){
-                hourglass.innerHTML =  "&#xf252;";
-            },1000);
-            setTimeout(function(){
-                hourglass.innerHTML =  "&#xf253;";
-            },2000);
-        }
-
-        hourglassTip();
-
-        setInterval(hourglassTip,3000);
-    </script> -->
-
-    <!-- ========================================== end animated icons ======================================= -->
-
 
 
     <div class="center">
-        <div class="form-container rounded pt-1 pt-2">
+            <div class="col-lg-4 col-sm-12"id="icons">
+        <!-- <div class="form-container rounded pt-1 pt-2"> -->
             <a href="handbag.html">
-                <input type="image" id="handbag" class="handbag icons rounded" src="images/handbag.png" width="100"
+                <img type="image" id="handbag" class="handbag icons rounded" src="images/handbag.png" width="100"
                     height="100" />
             </a>
         </div>
 
-        <div class="form-container rounded pt-1 pt-2">
+        <div class="col-lg-4 col-sm-12"id="icons">
+        <!-- <div class="form-container rounded pt-1 pt-2"> -->
             <a href="dress.html">
-                <input type="image" id="dress" class="dress icons rounded" src="images/dress1.jpg" width="100"
+                <img type="image" id="dress" class="dress icons rounded" src="images/dress.jpg" width="100"
                     height="100" />
             </a>
         </div>
 
-        <div class="form-container rounded pt-1 pt-2">
+        <div class="col-lg-4 col-sm-12" id="icons">
+        <!-- <div class="form-container rounded pt-1 pt-2"> -->
             <a href="shoes.html">
-                <input type="image" id="shoes" class="shoess icons rounded" src="images/heel.jpg" width="100"
+                <img type="image" id="shoes" class="shoess icons rounded" src="images/shoes.png" width="100"
                     height="100" />
             </a>
         </div>
     </div>
 
-    <!-- <script>
-      $(document).ready(function(){
-    $('#myModal').modal('show');
-  });
- </script> -->
+    
 
 
 
