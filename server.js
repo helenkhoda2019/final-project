@@ -20,16 +20,13 @@ if (process.env.Node_ENV === "production") {
 
 app.use(express.static(path.join(__dirname, 'client/public')));
 
-app.get('/dress', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client/public', 'dress.html'));
-});
 
 app.get('/shoes', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'shoes.html'));
 });
 
-app.get('/handbag', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client/public', 'handbag.html'));
+app.get('/shop', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'shop.html'));
 });
 
 app.get('/login', function (req, res) {
@@ -38,6 +35,10 @@ app.get('/login', function (req, res) {
 
 app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'about.html'));
+});
+
+app.get('/plan', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'plan.html'));
 });
 
 
