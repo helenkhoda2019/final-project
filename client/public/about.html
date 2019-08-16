@@ -9,7 +9,7 @@
     <!-- icon cdn and style  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-         <!-- google font -->
+    <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/style.css">
@@ -18,85 +18,97 @@
 <body>
 
     <!-- ========= navbar ============== -->
-    <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand mx-auto" href="home.html">
-                <h1>Steal the Show</h1>
-                <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="plan.html">How It Works</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Shop By Category
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item category" id="dress" href="#">Dresses</a>
-                                <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
-                                <a class="dropdown-item category" id="bag" href="#">Handbags</a>
-                            </div>
-                        </li>
-                    
-                    <div class='nav-right'>
-                            
-                        <li class="nav-item mr-1">
-                            <a class="nav-link" href="login.html">Log In</a>
-                        </li>
-                        <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
-                        <li class="nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart" src="images/shopping-bag-48.png"/></a>
-                        </li>
-                        <!-- ITEM COUNT -->
-                        <li id="item-count"></li>
+    <nav class="navbar navbar-expand-lg" style="margin:0;" id="homenav">
+        <a class="navbar-brand mx-auto" href="home.html">
+            <h1>Steal the Show</h1>
+            <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="plan.html">How It Works</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop By Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item category" id="dress" href="#">Dresses</a>
+                        <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
+                        <a class="dropdown-item category" id="bag" href="#">Handbags</a>
                     </div>
-                </ul>
-            </div>
-        </nav>
-   
+                </li>
+
+                <div class='nav-right'>
+
+                    <li class="nav-item mr-1">
+                        <a class="nav-link" href="login.html">Log In</a>
+                    </li>
+                    <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
+                    <li class="nav-item">
+                        <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
+                                src="images/shopping-bag-48.png" /></a>
+                    </li>
+                    <!-- ITEM COUNT -->
+                    <li id="item-count"></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
     <br>
 
     <!-- TITLE AND SUBTITLE -->
-    <h1 class="text-center">About the Company</h1>
-    <h3 class="text-center"> </h3>
-    <br>
 
-<div class="container-fluid">
-   
+    <div class="closet-pic" style="width: 100px; height:100px;">
+        <img src="images/hanger.jpg" >
+    </div>
 
-</div>
 
-        
+    <div class="card border-secondary mb-3" id="card-body" style="max-width: 36rem;margin: auto;">
+        <div class="card-header text-center">About the Company</div>
+        <div class="card-body text-secondary text-center">
+            <h5 class="card-title">Everyone Deserves a
+                Cinderella Experience</h5>
+            <p class="card-text text-center">One woman spotted a Tory Burch sequined dress across the room, ran over,
+                put it on, and exclaimed,
+                “I look so hot!”. It dawned on them that renting could make women feel amazing, solidifying Steat the Show’s
+                mission to deliver that feeling of empowerment to all women.</p>
+        </div>
+    </div>
+    
+
+
+
 
     
-            
-    
 
-        
-    
+
+
+
+
+
 
     <!-- bootstrap -->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="shoes.js"></script>
 </body>
 
