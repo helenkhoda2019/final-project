@@ -16,15 +16,17 @@ function getData(thisid) {
         for (var i = 0; i < data.length; i++) {
             inventory[data[i]._id] = data[i]
             var card = `
-            <div class="card" id="shoe-data" style="width: 18rem;">
+           
+            <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <img class="card-img-top" src="${data[i].src}"/>
                         <h5 class="card-title">${data[i].designer}</h5>
                         <p class="card-text">${data[i].description}</p>
                         <p class="card-text price">Retail Price: $${data[i].retailPrice}</p>
-                        <button class="btn btn-black add-to-cart" id='bt${data[i]._id}'>Add to Cart</button>
+                        <button class="btn btn-blue add-to-cart" id='bt${data[i]._id}'>Add to Cart</button>
                 </div>
-            </div>        
+            </div>  
+            
                         `
             $("#shoe-data").append(card);
         }
