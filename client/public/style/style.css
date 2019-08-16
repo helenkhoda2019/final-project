@@ -146,12 +146,12 @@ video {
 
 a.btn.btn-black{
     color: white;
-    background: black;
+    background:#97B6E4
 }
 
 a.btn.btn-gold {
-    color:black;
-    background: gold;
+    color: #795548;
+    background: #FFEB95;
 }
 
 .card-footer:last-child {
@@ -214,7 +214,7 @@ nav {
 }
 
 .btn-black {
-    background-color: #000000;
+    background-color:#FFEB95
     color: #ffffff;
 
 }
