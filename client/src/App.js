@@ -1,21 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import Navbar from "./components/Navbar";
-// import Profile from "./component/Cart";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
 
 
 function App() {
-  return (<Router>
+  return (
 
-    <Navbar />
+<video className="section1" loop autoPlay>
+  <h1>Steal the Show</h1>
+    <source src={('../videos/versace2.mp4')} type="video/mp4" />
+    
+</video>
+ 
+ 
 
-    <Switch>
-      <Route exact path="/" component={Homepage} />
-    </Switch>
-
-
-  </Router>
+    
   );
 }
 
