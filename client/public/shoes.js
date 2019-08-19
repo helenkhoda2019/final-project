@@ -72,7 +72,7 @@ $("#cart").on("click", function () {
     }
 
     console.log(totalCost);
-    var rowTotal = "<tr><td></td><td>Total:</td><td>$" + totalCost + "</td></tr>"
+    var rowTotal = "<tr><td></td><td>Total:</td><td>$" + totalCost + "</td></tr>" + "<tr><td></td><td>Total Rental Package Price: <td>$69</td></tr>"
     $('#table').append(rowTotal);
 
     // Removes unwanted item from shopping bag

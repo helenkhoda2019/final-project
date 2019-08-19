@@ -29,7 +29,9 @@ body {
  }
 
 .modal-content {
-    background-color: #b5ab99e3;
+    background-color: #FFEB95;
+    opacity: 0.8;
+    /* #b5ab99e3; */
 }
 
 .section{
@@ -213,6 +215,10 @@ a.btn.btn-yellow {
     background:#97B6E4
 }
 
+.btn-yellow {
+    color: #795548;
+    background: #FFEB95;
+}
 
 /*************** SHOP PAGE **************************************/
 #shop-container {
