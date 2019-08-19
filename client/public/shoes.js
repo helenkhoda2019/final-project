@@ -2,6 +2,14 @@ var inventory = {};
 var user_cart = [];
 var items = 0;
 
+
+if (sessionStorage.getItem("userId") === null) {
+    window.location = "/login";
+} 
+
+// if (sessionStorage.getItem("userId") === userID) {
+//     $('#log-in-btn').hide();
+// }
 // Categories of items
 $('.category').on("click", function () {
     getData(this.id)
