@@ -18,6 +18,12 @@ body {
     margin: 0px;
 }
 
+.homeh1{
+    font-style: italic;  
+    font-family: Genath-Regular, serif;  
+    text-align: center;
+    margin-top: 50px;
+}
 #homenav{
     background-image: url("../images/homenavbar.jpg")
 }
@@ -34,12 +40,17 @@ body {
      align-items: center;
  }
 
-.modal-content {
+ .modal-content {
     background-color: #FFEB95;
     opacity: 0.8;
     /* #b5ab99e3; */
 }
 
+.img1 {
+    vertical-align: middle;
+    border-style: none;
+    margin: 0px 190px auto;
+}
 .section{
     width: 100%;
     height:100vh; 
@@ -222,10 +233,6 @@ a.btn.btn-yellow {
     background:#97B6E4
 }
 
-.btn-yellow {
-    color: #795548;
-    background: #FFEB95;
-}
 
 /*************** SHOP PAGE **************************************/
 #shop-container {
