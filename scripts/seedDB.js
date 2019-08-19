@@ -18,6 +18,60 @@ const userSeed = [
 
 const inventorySeed = [
   {
+    src: "https://pc-ap.rtrcdn.com/productimages/front/270x/fe/BM521.jpg",
+    alt: "Metallic Blue Gown",
+    description: "Metallic Blue Gown",
+    designer: "Badgley Mischka",
+    retailPrice: 795,
+    rented: false,
+    category: "dress"
+  },
+  {
+    src: "https://pc-ap.rtrcdn.com/productimages/front/270x/12/AMR22.jpg",
+    alt: "Eva Dress",
+    description: "Eva Dress",
+    designer: "Amur",
+    retailPrice: 448,
+    rented: false,
+    category: "dress"
+  },
+  {
+    src: "https://pc-ap.rtrcdn.com/productimages/front/270x/04/MNL245.jpg",
+    alt: "Sequin Faux Wrap Dress",
+    description: "Sequin Faux Wrap Dress",
+    designer: "Monique Lhuillier",
+    retailPrice: 495,
+    rented: false,
+    category: "dress"
+  },
+  {
+    src: "https://pc-ap.rtrcdn.com/productimages/front/270x/6f/PK335.jpg",
+    alt: "Roxanna High Low Gown",
+    description: "Roxanna High Low Gown",
+    designer: "Park",
+    retailPrice: 388,
+    rented: false,
+    category: "dress"
+  },
+  {
+    src: "https://pc-ap.rtrcdn.com/productimages/front/270x/0c/SLN50.jpg",
+    alt: "Kerama Gown",
+    description: "Kerama Gown",
+    designer: "Solace London",
+    retailPrice: 585,
+    rented: false,
+    category: "dress"
+  },
+  {
+    src: "https://pc-ap.rtrcdn.com/productimages/front/270x/57/MNL253.jpg",
+    alt: "Black Cut Out Gown",
+    description: "Black Cut Out Gown",
+    designer: "Monique Lhuillier",
+    retailPrice: 495,
+    rented: false,
+    category: "dress"
+  },
+  {
     src: "https://pc-ap.rtrcdn.com/productimages/front/270x/c3/REF14.jpg",
     alt: "Nikita dress",
     description: "Nikita dress",
