@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+/* ABOUT US IMAGE */
+.img1 {
+    vertical-align: middle;
+    border-style: none;
+    margin: 0px -60px auto;
+}
 
 .navbar {
     z-index: 1;
