@@ -34,7 +34,7 @@ body {
 
 .section{
     width: 100%;
-    /* height:100vh; */
+    height:100vh; 
     display: flex;
     align-items:center;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
     font-family: 'Mr De Haviland', cursive;
     font-size:240px;
     position: absolute;
-}
+} 
 .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -82,7 +82,7 @@ div.card-body.text-secondary.text-center{
     z-index: 0;
 }
 
-/* #button{
+ #button{
     text-align: center;
     background: rgb(255, 255, 255);
     padding: 10px;
@@ -98,16 +98,17 @@ div.card-body.text-secondary.text-center{
 }
 
 #video-container{
-    margin-top:100px;
+    margin: -102px 0px -2px auto;
+
 }
 
 .video-container2{
     position: absolute;
-    top:0;
+    top:16px;
     left:0;
     width:100%;
     /* z-index: -1; */
-    margin: 0 110px auto;
+    margin: 0 126px auto;
 }
 
 #bgvideo {
@@ -252,3 +253,49 @@ a.btn.btn-yellow {
 .card-title {
     margin-top: .75rem;
 }
+
+/* intro css */
+ .section2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+ .video-container2 {
+    position: absolute;
+    top:16px;
+    left: 0;
+    width: 100%
+    
+}
+
+
+
+.section2 h1 {
+    text-align: center;
+    color: white;
+    padding:20px;
+    z-index: 10;
+    font-family: 'Mr De Haviland', cursive;
+    font-size:240px;
+    position: absolute;
+    margin: 0 auto;
+}
+ 
+.intro-button{
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding:20px;
+    z-index: 10;
+    font-family: 'Mr De Haviland', cursive;
+    font-size:50px;
+    position: absolute;
+    margin: 547px -722px;
+} 
