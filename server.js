@@ -20,6 +20,13 @@ if (process.env.Node_ENV === "production") {
 
 app.use(express.static(path.join(__dirname, 'client/public')));
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'intro.html'));
+});
+
+app.get('/home', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'home.html'));
+});
 
 app.get('/shoes', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'shoes.html'));
@@ -88,21 +95,20 @@ app.post("/api/cart/rent/:id", function (req, res) {
   })
 });
 
+// app.get("/profile", function (req, res) {
+//   db.User.find({
+//     email: 'test@me.com'
+//   })
+//     .populate('itemsRented')
+//     .then(function (dbUser) {
+//       res.json(dbUser);
+//     })
+//     .catch(function (err) {
+//       res.json(err);
+//     })
+// });
 
-app.get("/profile", function (req, res) {
-  db.User.find({
-    email: 'test@me.com'
-  })
-    .populate('itemsRented')
-    .then(function (dbUser) {
-      res.json(dbUser);
-    })
-    .catch(function (err) {
-      res.json(err);
-    })
-});
-
-app.post("/api/login", function (req, res) {
+app.post("/login", function (req, res) {
   var username = req.body.username;
   var userpassword = req.body.password;
   console.log(username);
@@ -115,9 +121,10 @@ app.post("/api/login", function (req, res) {
         password: userpassword
       })
       console.log("User Created!")
-      res.send("/home");
+      res.json({"error": "true"});
     }
     else {
+      console.log(data.password, userpassword);
       if (data.password !== userpassword) {
         res.json(
           {
@@ -131,7 +138,8 @@ app.post("/api/login", function (req, res) {
         res.json(
           {
             userID: data._id,
-            msg: ""
+            msg: "",
+            error: "false"
           }
         )
         console.log("Correct Password!");
