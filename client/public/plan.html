@@ -9,87 +9,78 @@
     <!-- icon cdn and style  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-         <!-- google font -->
+    <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body id="plan">
 
     <!-- ========= navbar ============== -->
     <nav class="navbar navbar-expand-lg" style="margin:0;" id="homenav">
-            <a class="navbar-brand mx-auto" href="home.html">
-                <h1>Steal the Show</h1>
-                <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+        <a class="navbar-brand mx-auto" href="home.html">
+            <h1>Steal the Show</h1>
+            <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="plan.html">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="shop.html">Shop</a> </li>
+            
+
+                <div class='nav-right'>
+
+                    <li class="nav-item mr-1">
+                        <a class="nav-link" href="login.html">Log In</a>
                     </li>
+                    <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
                     <li class="nav-item">
-                        <a class="nav-link mr-1" href="about.html">About Us</a>
+                        <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
+                                src="images/shopping-bag-48.png" /></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="plan.html">How It Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="shop.html">Shop</a>                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Shop By Category
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item category" id="dress" href="#">Dresses</a>
-                            <a class="dropdown-item category" id="shoes" href="#">Shoes</a>
-                            <a class="dropdown-item category" id="bag" href="#">Handbags</a>
-                        </div>
-                    </li> -->
-    
-                    <div class='nav-right'>
-    
-                        <li class="nav-item mr-1">
-                            <a class="nav-link" href="login.html">Log In</a>
-                        </li>
-                        <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
-                        <li class="nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
-                                    src="images/shopping-bag-48.png" /></a>
-                        </li>
-                        <!-- ITEM COUNT -->
-                        <li id="item-count"></li>
-                    </div>
-                </ul>
-            </div>
-        </nav>
+                    <!-- ITEM COUNT -->
+                    <li id="item-count"></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
 
 
-  
-    
+
+
 
     <!-- TITLE AND SUBTITLE -->
+    <div class="plans-wrapper">
     <br>
     <br>
-    <h1 class="text-center">How it Works</h1>
-    <h3 class="text-center"> Two ways <em>you</em> can steal the show:</h3>
+    <h1 class="text-center plan-text">How it Works</h1>
+    <h3 class="text-center plan-text"> Two ways <em>you</em> can steal the show:</h3>
     <br>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <!-- CARD DECK -->
-            
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <!-- CARD DECK -->
+
                 <div class="card-deck">
-                        <!-- FIRST CARD -->
-                        <div class="card">
-                            <img class="card-img-top" src="images/lightblue.png" alt="Card image cap" height="100px;">
-                          <div class="card-body">
+                    <!-- FIRST CARD -->
+                    <div class="card">
+                        <img class="card-img-top" src="images/lightblue.png" alt="Card image cap" height="100px;">
+                        <div class="card-body">
                             <h5 class="card-title text-center">STS Starter Package<br>$69 Per Month</h5>
                             <p class="card-text">
                                 <ul>
@@ -98,56 +89,44 @@
                                     <li>Free shipping, dry cleaning, and insurance</li>
                                 </ul>
                             </p>
-                            <!-- FIX ON HOVER -->
                             <div class="card-footer text-center">
-                                    <a href="/login.html" class="btn btn-blue">Subscribe Now!</a>
-                                    
-                                </div>
-                            
-                          </div>
-                        </div> 
-            
-                        <!-- SECOND CARD -->
-                        <div class="card">
-                          <img class="card-img-top" src="images/khaki.jpg" alt="Card image cap" height="100px;">
-                          <div class="card-body">
+                                <a href="/login" class="btn btn-blue">Subscribe Now!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECOND CARD -->
+                    <div class="card">
+                        <img class="card-img-top" src="images/khaki.jpg" alt="Card image cap" height="100px;">
+                        <div class="card-body">
                             <h5 class="card-title text-center">STS Gold Package<br>$99 Per Month</h5>
                             <p class="card-text">
-                            <ul>
-                                <li>Rent <em>unlimited</em> pieces</li>
-                                <li>Swap anytime. No return dates. </li>
-                                <li>Free shipping, dry cleaning, and insurance</li>
-                            </ul>
-                        </p>
+                                <ul>
+                                    <li>Rent <em>unlimited</em> pieces</li>
+                                    <li>Swap anytime. No return dates. </li>
+                                    <li>Free shipping, dry cleaning, and insurance</li>
+                                </ul>
+                            </p>
                             <div class="card-footer text-center">
                                 <a href="#" class="btn btn-yellow">Subscribe Now!</a>
-                             
-                                
                             </div>
-                            
-                          </div>
                         </div>
-
-                        
-                
-                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>    
 
-</div>
 
-        
 
-    
-            
-    
 
-        
-    
+
+
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>

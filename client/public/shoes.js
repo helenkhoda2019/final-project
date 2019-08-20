@@ -7,9 +7,11 @@ if (sessionStorage.getItem("userId") === null) {
     window.location = "/login";
 } 
 
-// if (sessionStorage.getItem("userId") === userID) {
+// IF USER IS LOGGED IN, HIDE LOG IN BUTTON
+//  if (sessionStorage.getItem("userId") === userID) {
 //     $('#log-in-btn').hide();
 // }
+
 // Categories of items
 $('.category').on("click", function () {
     getData(this.id)

@@ -89,10 +89,54 @@
 
 
     <body>
+
+<!-- MODAL -->
+            <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Your items are on their way and you are on your way to <em>stealing</em> the show.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- MODAL -->
+            <div class="modal fade" id="wrongPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Sorry!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Incorrect password. Please try again. 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- LOGIN FORM     -->
         <div class="login">
-            <h1>Login</h1>
+            <h1>Log In</h1>
             <form method="post">
-                <input type="text" id="username" name="u" placeholder="Username" required="required" />
+                <input type="text" id="username" name="u" placeholder="Email" required="required" />
                 <input type="password" id="password" name="p" placeholder="Password" required="required" />
                 <button id="login" class="btn btn-primary btn-block btn-large">Start Shopping!</button>
             </form>
@@ -101,7 +145,7 @@
         <script>
             $("#login").on("click", function (event) {
                 event.preventDefault();
-                console.log("click");
+                console.log("inside login click");
                 $.ajax({
                     type: "POST",
                     url: "/login",
@@ -113,10 +157,14 @@
                     success: function (data) {
                         console.log(data);
                         if (data.error == "false") {
+                            // $('#loginModal').modal('show');
                             sessionStorage.setItem("userId", data.userID);
                             window.location = "/shop"
+                            
+                            
                         } else {
-                            alert("Your password didn't work!");
+                            $('#wrongPasswordModal').modal('show');
+
                         }
                     },
                     error: function (err) {
@@ -124,10 +172,12 @@
                     }
                 });
             })
+
         </script>
 
-        <style>
-            
+
+
+<style>      
 /************* log in style **************/
 .btn {
     display: inline-block;
