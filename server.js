@@ -79,6 +79,9 @@ app.post("/api/cart/return/:id", function (req, res) {
     if (err) {
       return err
     }
+    db.User.findByIdAndUpdate(req.body.userId, {$pull: {itemsRented: data._id } }, function(userData){
+
+    })
     res.json(data)
   })
 });
@@ -91,22 +94,36 @@ app.post("/api/cart/rent/:id", function (req, res) {
     if (err) {
       return err
     }
+    // console.log(req.body.userId)
+    db.User.findByIdAndUpdate(req.body.userId, {$push: {itemsRented: data } }, function(userData){
+
+    })
     res.json(data)
   })
 });
 
-// app.get("/profile", function (req, res) {
-//   db.User.find({
-//     email: 'test@me.com'
-//   })
-//     .populate('itemsRented')
-//     .then(function (dbUser) {
-//       res.json(dbUser);
-//     })
-//     .catch(function (err) {
-//       res.json(err);
-//     })
-// });
+app.get("/api/user/:id", function(req, res){
+  db.User.findById(req.params.id, function(err, data) {
+    if (err) {
+      return err;
+    }
+    res.json({
+      email: data.email,
+      itemsRented: data.itemsRented
+    })
+  })
+});
+
+app.get("/api/user/profile/:id", function (req, res) {
+  db.User.findById(req.params.id)
+    .populate('itemsRented')
+    .then(function (dbUser) {
+      res.json(dbUser);
+    })
+    .catch(function (err) {
+      res.json(err);
+    })
+});
 
 app.post("/login", function (req, res) {
   var username = req.body.username;
