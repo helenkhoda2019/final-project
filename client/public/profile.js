@@ -14,7 +14,7 @@ $(document).ready(function() {
                             <p class="card-text">${data.description}</p>
                             <p class="card-text price">Retail Price: $${data.retailPrice}</p>
                             <button data-toggle="modal" data-target="#confirmRentModal" class="btn btn-blue rent-btn" data-id='${data._id}' id='rb${data._id}'>Rent Item</button>
-                            <button class="btn btn-blue return-btn" data-id='${data._id}' id='eb${data._id}'>Return Item</button>
+                           
                             <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=79Y9XJFM5TKQU" class="btn btn-yellow" role="button" id='bt${data._id}'>Buy Now</a>
                     </div>
                 </div>        
@@ -36,9 +36,9 @@ $(document).ready(function() {
 
     fillCart();
 
-    $.getJSON("api/user/profile/" + sessionStorage.getItem("userId"), function(data){
-        $("#pro-email").text(data.itemsRented[0].description);
-    })  
+    // $.getJSON("api/user/profile/" + sessionStorage.getItem("userId"), function(data){
+    //     $("#pro-email").text(data.itemsRented[0].description);
+    // })  
 
     $(document).on('click', '.return-btn', function() {
         console.log("Return button clicked");
@@ -71,12 +71,6 @@ $(document).ready(function() {
             fillCart();
         })
     })
-
-
-
-
-
-
 
 });
 

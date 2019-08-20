@@ -45,7 +45,7 @@
                         <div class='nav-right'>
         
                             <li class="nav-item mr-1">
-                                <a class="nav-link" href="/checkout">My Profile</a>
+                                <a class="nav-link" id="log-out-btn" href="/logout">Log Out</a>
                             </li>
                             <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
                             <li class="nav-item">
@@ -59,45 +59,31 @@
                 </div>
             </nav>
 
-        <br>
-        <h1 id="pro-email"></h1>
-        <h1 class="text-center plan-text">Your Shopping Bag</h1>
-        <h3 class="text-center"></h3>
-        <br> 
-        <div class="modal fade" id="confirmRentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      Your item is on its way and you are on your way to <em>stealing</em> the show.
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-               </div>
-            
 
+
+
+
+
+        <br>
+        
+        <h1 id="pro-username" class="text-center plan-text">Welcome back, </h1>
+        <h1 class="text-center plan-text">Your Profile</h1>
+        <br> 
+        <h1 id="pro-items"></h1>
 
         <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                    <div class="card-deck" id="checkout-data">
-                       
-                        
-
-                        
-                        </div>
-                    </div>
+                    <div id="profile-data">
+                    <!-- <div class="col-md-8 offset-md-2">
+                    <div class="card-deck" id="profile-data"> -->
+                           
+                        <!-- </div>
+                    </div> -->
                 </div>
 
             </div>
+
+        </div>
 
            
    
@@ -111,6 +97,7 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
 
+        <script src="checkout.js"></script>
         <script src="profile.js"></script>
         <script src="logout.js"></script>
 </body>

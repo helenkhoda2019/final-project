@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="style/style.css">
     <!-- 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>   
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-            </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-            </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 
     <style class="cp-pen-styles">
@@ -39,45 +39,43 @@
 
 
     <nav class="navbar navbar-expand-lg" style="margin:0;" id="homenav">
-            <a class="navbar-brand mx-auto" href="home.html">
-                <h1>Steal the Show</h1>
-                <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-                    </li>
+        <a class="navbar-brand mx-auto" href="home.html">
+            <h1>Steal the Show</h1>
+            <img src="images/gold-glitter.jpg" width="100" height="100" class="logo d-inline-block" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="/plan">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-1" href="/shop">Shop</a> </li>
+
+
+                <div class='nav-right'>
+
+
+                    <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
                     <li class="nav-item">
-                        <a class="nav-link mr-1" href="about.html">About Us</a>
+                        <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
+                                src="images/shopping-bag-48.png" /></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="plan.html">How It Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-1" href="shop.html">Shop</a>                    </li>
-                    
-    
-                    <div class='nav-right'>
-    
-                        <li class="nav-item mr-1">
-                            <a class="nav-link" href="login.html">Log In</a>
-                        </li>
-                        <!-- SHOPPING BAG LINK THAT TRIGGERS MODAL-->
-                        <li class="nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalCart"><img id="cart"
-                                    src="images/shopping-bag-48.png" /></a>
-                        </li>
-                        <!-- ITEM COUNT -->
-                        <li id="item-count"></li>
-                    </div>
-                </ul>
-            </div>
-        </nav>
+                    <!-- ITEM COUNT -->
+                    <li id="item-count"></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
 
 
     <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" -->
@@ -90,8 +88,8 @@
 
     <body>
 
-<!-- MODAL -->
-            <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <!-- MODAL -->
+        <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -111,31 +109,32 @@
                 </div>
             </div> -->
 
-            <!-- MODAL -->
-            <div class="modal fade" id="wrongPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Sorry!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Incorrect password. Please try again. 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+        <!-- MODAL -->
+        <div class="modal fade" id="wrongPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sorry!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Incorrect password. Please try again.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
+        </div>
 
-    <!-- LOGIN FORM     -->
+        <!-- LOGIN FORM     -->
         <div class="login">
             <h1>Log In</h1>
             <form method="post">
+                <input type="text" id="firstName" placeholder="First Name" />
                 <input type="text" id="username" name="u" placeholder="Email" required="required" />
                 <input type="password" id="password" name="p" placeholder="Password" required="required" />
                 <button id="login" class="btn btn-primary btn-block btn-large">Start Shopping!</button>
@@ -146,22 +145,29 @@
             $("#login").on("click", function (event) {
                 event.preventDefault();
                 console.log("inside login click");
+                var i = 0;
+                login();
+            })
+
+            function login() {
                 $.ajax({
                     type: "POST",
                     url: "/login",
                     data: {
+                        firstName: document.getElementById("firstName").value,
                         username: document.getElementById("username").value,
                         password: document.getElementById("password").value
                     },
                     dataType: "json",
                     success: function (data) {
                         console.log(data);
+                        if (data.error == "true") return;
                         if (data.error == "false") {
                             // $('#loginModal').modal('show');
                             sessionStorage.setItem("userId", data.userID);
                             window.location = "/shop"
-                            
-                            
+
+
                         } else {
                             $('#wrongPasswordModal').modal('show');
 
@@ -169,200 +175,198 @@
                     },
                     error: function (err) {
                         console.log(err);
+
                     }
                 });
-            })
-
+            }
         </script>
 
 
 
-<style>      
-/************* log in style **************/
-.btn {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    padding: 4px 10px 4px;
-    margin-bottom: 0;
-    font-size: 13px;
-    line-height: 18px;
-    color: white;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    vertical-align: middle;
-    background-color: #f5f5f5;
-    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: linear-gradient(top, #ffffff, #e6e6e6);
-    background-repeat: repeat-x;
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0);
-    border-color: #e6e6e6 #e6e6e6 #e6e6e6;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    border: 1px solid #e6e6e6;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    *margin-left: .3em;
-}
+        <style>
+            /************* log in style **************/
+            .btn {
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                padding: 4px 10px 4px;
+                margin-bottom: 0;
+                font-size: 13px;
+                line-height: 18px;
+                color: white;
+                text-align: center;
+                text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+                vertical-align: middle;
+                background-color: #f5f5f5;
+                background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+                background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: linear-gradient(top, #ffffff, #e6e6e6);
+                background-repeat: repeat-x;
+                filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0);
+                border-color: #e6e6e6 #e6e6e6 #e6e6e6;
+                border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+                border: 1px solid #e6e6e6;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+                *margin-left: .3em;
+            }
 
-.btn:hover,
-.btn:active,
-.btn.active,
-.btn.disabled,
-.btn[disabled] {
-    background-color: #e6e6e6;
-}
+            .btn:hover,
+            .btn:active,
+            .btn.active,
+            .btn.disabled,
+            .btn[disabled] {
+                background-color: #e6e6e6;
+            }
 
-.btn-large {
-    padding: 9px 14px;
-    font-size: 15px;
-    line-height: normal;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
+            .btn-large {
+                padding: 9px 14px;
+                font-size: 15px;
+                line-height: normal;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+            }
 
-.btn:hover {
-    color: #333333;
-    text-decoration: none;
-    background-color: #e6e6e6;
-    background-position: 0 -15px;
-    -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
-    -ms-transition: background-position 0.1s linear;
-    -o-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-}
+            .btn:hover {
+                color: #333333;
+                text-decoration: none;
+                background-color: #e6e6e6;
+                background-position: 0 -15px;
+                -webkit-transition: background-position 0.1s linear;
+                -moz-transition: background-position 0.1s linear;
+                -ms-transition: background-position 0.1s linear;
+                -o-transition: background-position 0.1s linear;
+                transition: background-position 0.1s linear;
+            }
 
-.btn-primary,
-.btn-primary:hover {
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    color: #ffffff;
-}
+            .btn-primary,
+            .btn-primary:hover {
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+                color: #ffffff;
+            }
 
-.btn-primary.active {
-    color: rgba(255, 255, 255, 0.75);
-}
+            .btn-primary.active {
+                color: rgba(255, 255, 255, 0.75);
+            }
 
-.btn-primary {
-    background-color: #4a77d4;
-    background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4);
-    background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4));
-    background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4);
-    background-image: -o-linear-gradient(top, #6eb6de, #4a77d4);
-    background-image: linear-gradient(top, #6eb6de, #4a77d4);
-    background-repeat: repeat-x;
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);
-    border: 1px solid #3762bc;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
-}
+            .btn-primary {
+                background-color: #4a77d4;
+                background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4);
+                background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4);
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4));
+                background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4);
+                background-image: -o-linear-gradient(top, #6eb6de, #4a77d4);
+                background-image: linear-gradient(top, #6eb6de, #4a77d4);
+                background-repeat: repeat-x;
+                filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);
+                border: 1px solid #3762bc;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
+            }
 
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active,
-.btn-primary.disabled,
-.btn-primary[disabled] {
-    filter: none;
-    background-color: #4a77d4;
-}
+            .btn-primary:hover,
+            .btn-primary:active,
+            .btn-primary.active,
+            .btn-primary.disabled,
+            .btn-primary[disabled] {
+                filter: none;
+                background-color: #4a77d4;
+            }
 
-.btn-block {
-    width: 100%;
-    display: block;
-}
+            .btn-block {
+                width: 100%;
+                display: block;
+            }
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-}
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+            }
 
-html {
-    width: 100%;
-    height: 100%;
-}
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    background: rgb(234, 212, 223);
-}
+            html {
+                width: 100%;
+                height: 100%;
+            }
 
-.login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -150px 0 0 -150px;
-    width: 300px;
-    height: 300px;
-}
+            body {
+                width: 100%;
+                height: 100%;
+                font-family: 'Open Sans', sans-serif;
+                background: rgb(234, 212, 223);
+            }
 
-.login h1 {
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-    text-align: center;
-}
+            .login {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -150px 0 0 -150px;
+                width: 300px;
+                height: 300px;
+            }
 
-input {
-    width: 100%;
-    margin-bottom: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-size: 13px;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
-    -webkit-transition: box-shadow .5s ease;
-    -moz-transition: box-shadow .5s ease;
-    -o-transition: box-shadow .5s ease;
-    -ms-transition: box-shadow .5s ease;
-    transition: box-shadow .5s ease;
-}
+            .login h1 {
+                color: #fff;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                letter-spacing: 1px;
+                text-align: center;
+            }
 
-input:focus {
-    box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2);
-}
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                outline: none;
+                padding: 10px;
+                font-size: 13px;
+                color: #fff;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+                box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+                -webkit-transition: box-shadow .5s ease;
+                -moz-transition: box-shadow .5s ease;
+                -o-transition: box-shadow .5s ease;
+                -ms-transition: box-shadow .5s ease;
+                transition: box-shadow .5s ease;
+            }
 
-.alert-primary {
-    color: #728396;
-    background-color: #cfe6e9;
-    border-color: #b8daff;
-    text-align: center;
-}
+            input:focus {
+                box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2);
+            }
 
-/* log in button and user/password background color style */
-#login.btn.btn-primary.btn-block.btn-large {
-    border: none;
-    background: #de66a24f;
-}
+            .alert-primary {
+                color: #728396;
+                background-color: #cfe6e9;
+                border-color: #b8daff;
+                text-align: center;
+            }
 
-#username {
-    background: #c49a3a33;
-}
+            /* log in button and user/password background color style */
+            #login.btn.btn-primary.btn-block.btn-large {
+                border: none;
+                background: #de66a24f;
+            }
 
-#password {
-    background:  #c49a3a33;
-}
-        
-        
-        
+            #username {
+                background: #c49a3a33;
+            }
+
+            #password {
+                background: #c49a3a33;
+            }
         </style>
 
     </body>
