@@ -48,6 +48,10 @@ app.get('/plan', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/public', 'plan.html'));
 });
 
+app.get('/checkout', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/public', 'checkout.html'));
+});
+
 
 app.get("/api/:category", function (req, res) {
   db.Inventory.find({
@@ -126,6 +130,7 @@ app.get("/api/user/profile/:id", function (req, res) {
 });
 
 app.post("/login", function (req, res) {
+  var firstName = req.body.firstName;
   var username = req.body.username;
   var userpassword = req.body.password;
   console.log(username);
@@ -134,6 +139,7 @@ app.post("/login", function (req, res) {
   }).then(function (data) {
     if (!data) {
       db.User.create({
+        firstName: firstName,
         email: username,
         password: userpassword
       })
