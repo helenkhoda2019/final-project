@@ -287,6 +287,19 @@ a.btn.btn-yellow {
     background:#97B6E4
 }
 
+.btn-white {
+    background: white;
+}
+
+.btn-outline-black {
+    border: 1px solid black;
+}
+
+.btn-pink {
+    background: #e9d4df;
+    color: black;
+}
+
 
 /*************** SHOP PAGE **************************************/
 #shop-container {
