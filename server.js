@@ -11,7 +11,11 @@ const Port = process.env.PORT || 8000;
 // const Image =require("./models/giphyModel");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-mongoose.connect("mongodb://localhost/stealtheshow", { useNewUrlParser: true });
+
+// If deployed, use the deployed database. Otherwise use the local db.
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/stealtheshow"
+// Connect to the Mongo db. 
+mongoose.connect(MONGODB_URI);
 
 if (process.env.Node_ENV === "production") {
   app.use(express.static("client/build"));
