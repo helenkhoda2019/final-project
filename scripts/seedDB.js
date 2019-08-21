@@ -13,7 +13,7 @@ const userSeed = [
   {
     firstName: "Chloe",
     email: "test@me.com",
-    password: "password"
+    password: "testing"
   }
 ];
 
@@ -181,6 +181,60 @@ const inventorySeed = [
     category: "bag"
   },
   {
+    src: "//images.neimanmarcus.com/ca/2/product_assets/X/4/T/Z/9/NMX4TZ9_ma.jpg",
+    alt: "Satin Wing Jeweled Sandals",
+    description: "Satin Wing Jeweled Sandals",
+    designer: "Giuseppe Zanotti",
+    retailPrice: 2125,
+    rented: false,
+    category: "shoes"
+  },
+  {
+    src: "//images.neimanmarcus.com/ca/5/product_assets/X/4/9/Y/L/NMX49YL_ma.jpg",
+    alt: "Metrolisse Over-The-Knee Red Sole Boots",
+    description: "Metrolisse Over-The-Knee Red Sole Boots",
+    designer: "Christian Louboutin",
+    retailPrice: 2995,
+    rented: false,
+    category: "shoes"
+  },
+  {
+    src: "//images.neimanmarcus.com/ca/4/product_assets/X/4/9/Y/0/NMX49Y0_ma.jpg",
+    alt: "New Very Riche 120 Peep-Toe Red Sole Pumps",
+    description: "New Very Riche 120 Peep-Toe Red Sole Pumps",
+    designer: "Christian Louboutin",
+    retailPrice: 3595,
+    rented: false,
+    category: "shoes"
+  },
+  {
+    src: "//images.neimanmarcus.com/ca/1/product_assets/X/4/L/V/9/NMX4LV9_ma.jpg",
+    alt: "Chiara Embroidered Butterfly Sandals",
+    description: "Chiara Embroidered Butterfly Sandals",
+    designer: "Sophia Webster",
+    retailPrice: 795,
+    rented: false,
+    category: "shoes"
+  },
+  {
+    src: "//images.neimanmarcus.com/ca/2/product_assets/X/4/P/4/4/NMX4P44_ma.jpg",
+    alt: "Cassandra Metallic YSL Sandals",
+    description: "Cassandra Metallic YSL Sandals",
+    designer: "Saint Laurent",
+    retailPrice: 1195,
+    rented: false,
+    category: "shoes"
+  },
+  {
+    src: "//images.neimanmarcus.com/ca/6/product_assets/X/4/B/W/X/NMX4BWX_ma.jpg",
+    alt: "Ilcepoze 100 See-Through Red Sole Pumps with Butterfly",
+    description: "Ilcepoze 100 See-Through Red Sole Pumps with Butterfly",
+    designer: "Christian Louboutin",
+    retailPrice: 925,
+    rented: false,
+    category: "shoes"
+  },
+  {
     src: "https://n.nordstrommedia.com/id/sr3/64e67a24-b4e2-43b9-a5e6-1d19132f16db.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2&quality=60",
     alt: "So Kate Point Toe Pump",
     description: "So Kate Pointy Toe Pump",
@@ -190,7 +244,7 @@ const inventorySeed = [
     category: "shoes"
   },
   {
-    src: "https://n.nordstrommedia.com/id/sr3/146b6b16-f7b4-4893-bcb4-5dc91d52df73.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=60&h=90&dpr=1.5&quality=65",
+    src: "//neimanmarcus.scene7.com/is/image/NeimanMarcus/NMX3P4L_CE_m?&wid=304&height=380",
     alt: "Rockstud T-Strap Pump",
     description: "Rockstud T-Strap Pump",
     designer: "Valentino Garavani",
@@ -208,7 +262,7 @@ const inventorySeed = [
     category: "shoes"
   },
   {
-    src: "https://n.nordstrommedia.com/id/sr3/21b75d3c-7070-4617-9ec6-f2210c897c25.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=60&h=90&dpr=3&quality=50",
+    src: "//neimanmarcus.scene7.com/is/image/NeimanMarcus/NMX4ELS_01_m?&wid=304&height=380",
     alt: "Quintana Crystal Pump",
     description: "Quintana Crystal Pump",
     designer: "Badgley Mischka Collection",
@@ -217,7 +271,7 @@ const inventorySeed = [
     category: "shoes"
   },
   {
-    src: "https://n.nordstrommedia.com/id/sr3/9d708d44-cb75-4d10-bb03-930ca523eed4.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=60&h=90&dpr=2&quality=60",
+    src: "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMX4PDB_66_m?&wid=400&height=500",
     alt: "Scarlet Slip-On Sandal",
     description: "Scarlet Slip-On Sandal",
     designer: "Gucci",
@@ -226,7 +280,7 @@ const inventorySeed = [
     category: "shoes"
   },
   {
-    src: "https://n.nordstrommedia.com/id/sr3/36ad9716-d5dd-434b-bf14-925a253c9c45.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=60&h=90&dpr=2&quality=60",
+    src: "https://n.nordstrommedia.com/id/sr3/36ad9716-d5dd-434b-bf14-925a253c9c45.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
     alt: "Aveline Bow Ankle Strap Sandal",
     description: "Aveline Bow Ankle Strap Sandal",
     designer: "Jimmy Choo",

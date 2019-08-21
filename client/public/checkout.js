@@ -25,7 +25,7 @@ $(document).ready(function () {
                                 <p class="card-text">${data.itemsRented[i].description}</p>
                                 <p class="card-text">$${data.itemsRented[i].retailPrice}</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <button class="btn btn-blue return-btn" data-id='${data.itemsRented[i]._id}' id='eb${data.itemsRented[i]._id}'>Return Item</button>
+                                <button class="btn btn-pink return-btn" data-id='${data.itemsRented[i]._id}' id='eb${data.itemsRented[i]._id}'>Return Item</button>
 
                                 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=79Y9XJFM5TKQU" class="btn btn-yellow" role="button" id='bt${data._id}'>Buy Now</a>
 
