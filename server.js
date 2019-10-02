@@ -7,7 +7,7 @@ var db = require("./models/index");
 require('./config/passport');
 // var ObjectId = mongoose.Types.ObjectId;
 
-const Port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 // const Image =require("./models/giphyModel");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
