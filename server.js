@@ -7,8 +7,8 @@ var db = require("./models/index");
 require('./config/passport');
 // var ObjectId = mongoose.Types.ObjectId;
 
-const Port = process.env.PORT || 8000;
-// const Image =require("./models/giphyModel");
+const port = process.env.PORT || 8000;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -175,13 +175,6 @@ app.post("/login", function (req, res) {
   }).catch(function (err) {
     res.json(err);
   })
-
-
-
 })
 
-
-
-
-
-app.listen(Port);
+app.listen(port);
