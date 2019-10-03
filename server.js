@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 var mongoose = require('mongoose');
 var db = require("./models/index");
-require('./config/passport');
+
 // var ObjectId = mongoose.Types.ObjectId;
 
 const port = process.env.PORT || 8000;
