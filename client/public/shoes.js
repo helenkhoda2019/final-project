@@ -3,9 +3,9 @@ var user_cart = [];
 var items = 0;
 
 
-if (sessionStorage.getItem("userId") === null) {
-    window.location = "/login";
-} 
+// if (sessionStorage.getItem("userId") === null) {
+//     window.location = "/login";
+// } 
 
 // IF USER IS LOGGED IN, HIDE LOG IN BUTTON
 //  if (sessionStorage.getItem("userId")) {
